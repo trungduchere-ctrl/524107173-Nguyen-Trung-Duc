@@ -1,0 +1,110 @@
+
+
+/* ================== KHUNG BÀI VIẾT ================== */
+.article-box {
+    max-width: 1300px;
+    background: #fff;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.article-title {
+    margin-bottom: 8px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.article-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.article-meta span {
+    margin-right: 15px;
+}
+
+/* ================== ẢNH DẠNG LƯỚI ================== */
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.what-is-blmw img{
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+
+}
+/* ================== DANH SÁCH ================== */
+.pc-req {
+    margin: 15px 0 25px 20px;
+    line-height: 1.8;
+}
+
+.pc-req img{
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+.pc-builds {
+    margin: 10px 0 0 20px;
+    font-size: 18px;
+}
+
+.pc-builds li {
+    margin-bottom: 15px;
+}
+
+.pc-builds ul {
+    margin-top: 8px;
+    margin-left: 20px;
+    list-style: disc;
+}
+
+.pc-builds img{
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 600px) {
+
+    .article-box {
+        padding: 15px;
+    }
+
+    .article-title {
+        font-size: 24px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-box p {
+    margin-bottom: 15px; /* tách với phần sau */
+}
+
+

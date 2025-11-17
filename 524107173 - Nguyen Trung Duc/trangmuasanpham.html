@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang mua sản phẩm</title>
+  <link rel="stylesheet" type="text/css" href="CSS/dinhdangtrangchu.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="CSS/trangmuasanpham.css">
+
+</head>
+<body>
+  <!-- ==================== HEADER TRÊN CÙNG ==================== -->
+<header class="top-header">
+    <div class="container">
+        <p>Hotline: 0968 239 497 - 097 221 6881 • Tư vấn build PC: 0986552233 • 
+        Địa chỉ: CS1: 83-85 Thái Hà - Đống Đa - Hà Nội | CS2: 83A Cửu Long - Q10 - TP.HCM</p>
+    </div>
+</header>
+
+<!-- ==================== LOGO + THANH TÌM KIẾM + LOGIN ==================== -->
+<div class="mid-header">
+    <div class="container mid-flex">
+        
+        <!-- Logo -->
+        <div class="logo">
+            <h2>TTG<span>SHOP</span></h2>
+        </div>
+
+        <!-- Thanh tìm kiếm -->
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm sản phẩm...">
+            <button><span>🔍</span></button>
+        </div>
+
+        <!-- Đăng nhập + giỏ hàng -->
+        <div class="user-actions">
+            <a href="http://127.0.0.1:5500/signuppage.html">👤 Đăng nhập / Đăng ký</a>
+            <a href="#" class="cart">🛒 Giỏ hàng</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- ==================== MENU NAVBAR ==================== -->
+<nav class="main-nav">
+    <ul class="menu">
+        <!-- Danh mục sản phẩm có dropdown -->
+        <li class="dropdown">
+            <a href="#">DANH MỤC SẢN PHẨM ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">PC Gaming</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Linh kiện máy tính</a></li>
+                <li><a href="#">Màn hình</a></li>
+                <li><a href="#">Phụ kiện</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Trang tin công nghệ</a></li>
+        <li><a href="#">TTG channel</a></li>
+        <li><a href="#">Build PC</a></li>
+        <li><a href="#">Link kiện máy tính</a></li>
+        <li><a href="#">ABOUT US</a></li>
+    </ul>
+</nav>
+
+
+  <!-- ==================== TRANG SẢN PHẨM ==================== -->
+  <div class="product-page container-custom">
+    <div class="product-layout">
+      <!-- Ảnh sản phẩm -->
+      <div class="product-images">
+        <img id="mainImg" src="images/product-main.jpg" class="product-main-img" alt="product">
+
+        <div class="product-thumbnails">
+          <img src="Media/12.jpg" class="thumb active" onclick="changeImg(this)">
+          <img src="Media/19.jpg" class="thumb" onclick="changeImg(this)">
+          <img src="Media/20.jpg" class="thumb" onclick="changeImg(this)">
+          <img src="Media/21.jpg" class="thumb" onclick="changeImg(this)">
+          <img src="Media/22.jpg" class="thumb" onclick="changeImg(this)">
+          <img src="Media/24.jpg" class="thumb" onclick="changeImg(this)">
+          <img src="Media/25.jpg" class="thumb" onclick="changeImg(this)">
+        </div>
+      </div>
+
+      <!-- Thông tin sản phẩm -->
+      <div class="product-info">
+        <h2 class="product-title">PC GAMING PERFORMANCE RTX 4060 8GB - i5 12400F</h2>
+        <p class="status">Tình trạng: <span class="in-stock">Còn hàng</span></p>
+
+        <div class="price-box">
+          <span class="new-price">18,480,000₫</span>
+          <span class="old-price">21,990,000₫</span>
+          <span class="discount">-16%</span>
+        </div>
+
+        <div class="option-group">
+          <label>CPU:</label>
+          <div class="option-list">
+            <button class="option-btn">i5 12400F + Tản Khí</button>
+            <button class="option-btn">i5 12400F + Tản Nước AIO 240</button>
+            <button class="option-btn">i5 13400F + Tản Khí</button>
+            <button class="option-btn">i5 13400F + Tản Nước AIO 240</button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <label>RAM:</label>
+          <div class="option-list">
+            <button class="option-btn active">RAM 16GB DDR4</button>
+            <button class="option-btn">RAM 32GB DDR4</button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <label>SSD:</label>
+          <div class="option-list">
+            <button class="option-btn active">512GB</button>
+            <button class="option-btn">1TB</button>
+          </div>
+        </div>
+
+        <div class="quantity-box">
+          <label>Số lượng:</label>
+          <input type="number" class="qty-input" value="1" min="1">
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-add">Thêm vào giỏ</button>
+          <button class="btn-buy">Mua ngay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+function changeImg(el) {
+  document.getElementById("mainImg").src = el.src;
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ===== CHỌN OPTION (CPU, RAM, SSD…) =====
+document.addEventListener("DOMContentLoaded", () => {
+  const optionGroups = document.querySelectorAll(".option-list");
+
+  optionGroups.forEach(group => {
+    const buttons = group.querySelectorAll(".option-btn");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        // bỏ active trong cùng nhóm
+        buttons.forEach(b => b.classList.remove("active"));
+
+        // thêm active vào nút được chọn
+        btn.classList.add("active");
+      });
+    });
+  });
+});
+
+// Set ảnh đầu tiên làm ảnh chính khi load trang
+document.addEventListener("DOMContentLoaded", () => {
+    const firstThumb = document.querySelector(".thumb");
+    if (firstThumb) {
+        document.getElementById("mainImg").src = firstThumb.src;
+        firstThumb.classList.add("active");
+    }
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ttg-footer">
+    <div class="footer-container">
+
+        <!-- Cột 1 -->
+        <div class="footer-column">
+            <h3>Thông tin liên hệ</h3>
+            <p>📍 CS1: 83 - 85 Thái Hà - Đống Đa - HN</p>
+            <p>📍 CS2: 83A Cửu Long - Phường 15 - Q10 - TP.HCM</p>
+            <p>📞 087.997.9997 - 098.655.2233</p>
+            <p>📧 ttgshoponline@gmail.com</p>
+        </div>
+
+        <!-- Cột 2 -->
+        <div class="footer-column">
+            <h3>Tài Khoản Ngân Hàng</h3>
+            <ul>
+                <li>Tài Khoản Ngân Hàng</li>
+                <li>Tìm Kiếm</li>
+                <li>Phương Thức Thanh Toán</li>
+            </ul>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="footer-column">
+            <h3>Chính Sách</h3>
+            <ul>
+                <li>Chính Sách Bảo Mật</li>
+                <li>Qui Định Bảo Hành</li>
+                <li>Chính Sách Đổi Trả</li>
+                <li>Điều Khoản Sử Dụng</li>
+                <li>Chính Sách Vận Chuyển & Kiểm Hàng</li>
+                <li>Phân Định Trách Nhiệm Của Tổ Chức Cung Ứng Dịch Vụ Logistic</li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

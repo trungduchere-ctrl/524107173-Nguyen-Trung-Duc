@@ -1,0 +1,57 @@
+
+
+/* ===== FORM ĐĂNG KÝ ===== */
+.formdangky {
+    width: 600px;
+    background: #fff;
+    margin: 60px auto;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #ff7b7b;
+    box-shadow: 0 0 3px rgba(255, 120, 120, 0.7);
+}
+
+.btn-submit {
+    width: 40%;
+    display: block;
+    margin: 10px auto 0;
+    padding: 12px 0;
+    background: #d86a6a;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-submit:hover {
+    background: #c85c5c;
+}
+

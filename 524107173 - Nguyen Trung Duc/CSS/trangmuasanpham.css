@@ -1,0 +1,203 @@
+/* ===================== CONTAINER CHUNG ===================== */
+.container-custom {
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===================== BỐ CỤC TRANG SẢN PHẨM ===================== */
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ===================== HÌNH ẢNH SẢN PHẨM ===================== */
+.product-images {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-main-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumb {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.thumb:hover {
+  border-color: #ff9800;
+}
+
+.thumb.active {
+  border-color: #f44336;
+}
+
+/* ===================== THÔNG TIN SẢN PHẨM ===================== */
+.product-info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.in-stock {
+  color: green;
+  font-weight: 600;
+}
+
+/* ===================== GIÁ ===================== */
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.new-price {
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.old-price {
+  color: #777;
+  text-decoration: line-through;
+  font-size: 18px;
+}
+
+.discount {
+  background: #e53935;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* ===================== TÙY CHỌN (OPTIONS) ===================== */
+.option-group {
+  margin-top: 20px;
+}
+
+.option-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option-btn:hover {
+  background: #ffe0b2;
+  border-color: orange;
+}
+
+.option-btn.active {
+  background: #ff9800;
+  border-color: #e65100;
+  color: #fff;
+}
+
+/* ===================== SỐ LƯỢNG ===================== */
+.quantity-box {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-input {
+  width: 70px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* ===================== NÚT MUA ===================== */
+.action-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-add {
+  background: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.btn-add:hover {
+  background: #e64a19;
+}
+
+.btn-buy {
+  background: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.btn-buy:hover {
+  background: #0d47a1;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-thumbnails {
+    justify-content: center;
+  }
+}
